@@ -16,6 +16,7 @@ public class EmployeeRunner implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		int a=15;
+		int b=16;
 		List<Employee> empList=Arrays.asList(
 				new Employee(1,"Ganesh",25376.12,"mech",27),
 				new Employee(2,"Nishanth",27895.36,"electrical",26),
