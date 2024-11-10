@@ -1,8 +1,9 @@
 package com.example.demo.runner;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -23,7 +24,7 @@ public class EmployeeRunner implements CommandLineRunner{
 				new Employee(5,"Sai",30153.96,"mech",28),
 				new Employee(6,"Anil",123.56,"electrical",26)
 				);
-		List<Employee> list=empList.stream().filter(x->x.getEDept().startsWith("c")).collect(Collectors.toList());
+		Optional<Employee> list=empList.stream().sorted(Comparator.comparingDouble(Employee::getESal).reversed()).findFirst();
 		System.out.println(list.toString());
 		
 	}
