@@ -1,0 +1,1 @@
+Admin adm=new Admin();
